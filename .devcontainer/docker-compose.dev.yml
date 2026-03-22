@@ -1,0 +1,17 @@
+services:
+  devcontainer:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ..:/workspace:cached
+    ports:
+      - "4200:4200"
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    # Keep container running
+    command: sleep infinity
+    # Enable terminal interaction
+    stdin_open: true
+    tty: true

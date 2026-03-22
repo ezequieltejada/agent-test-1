@@ -1,0 +1,22 @@
+{
+  "name": "Angular + HonoJS Dev Container",
+  "dockerComposeFile": "docker-compose.dev.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspace",
+  "forwardPorts": [4200, 3000],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "angular.ng-template",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "postCreateCommand": "cd /workspace/frontend && npm install; cd /workspace/backend && bun install",
+  "remoteUser": "root"
+}
