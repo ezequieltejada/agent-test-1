@@ -5,6 +5,13 @@
   "workspaceFolder": "/workspace",
   "forwardPorts": [4200, 3000],
   "customizations": {
+    "zed": {
+      "extensions": [
+        "angular",
+        "bun",
+        "html"
+      ]
+    },
     "vscode": {
       "extensions": [
         "angular.ng-template",
@@ -17,6 +24,5 @@
       }
     }
   },
-  "postCreateCommand": "cd /workspace/frontend && npm install; cd /workspace/backend && bun install",
   "remoteUser": "root"
 }

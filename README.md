@@ -53,6 +53,18 @@ A single, fully isolated container with all tools pre-installed:
 
 **Prerequisites:** Docker Desktop with WSL2 integration enabled.
 
+#### Connecting with Zed (recommended)
+
+Zed v0.218+ has native Dev Container support -- no SSH required. It reads `.devcontainer/devcontainer.json`, starts the container, and automatically installs `zed-remote-server` inside.
+
+1. Open Zed
+2. `Ctrl+Shift+P` → `dev containers: open folder in container`
+3. Select this project folder
+4. Zed builds the container on first run (takes a few minutes) and connects
+5. Open a terminal inside Zed and run `opencode`, `ng serve`, `bun run dev`, etc.
+
+#### Connecting via terminal
+
 **Start the dev container:**
 
 ```bash
